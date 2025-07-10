@@ -31,7 +31,7 @@ class LinkedList:
         else:
             self.transverse(self, current)
     
-    def append(self, node):
+    def append(self, node: Node):
         '''
         Complexity : O(N)
         '''
@@ -39,7 +39,7 @@ class LinkedList:
             self.head = node
         else:
             current_node = self.head
-            while(current_node is not None):
+            while(current_node is not None and current_node.next is not None):
                 current_node = current_node.next
             current_node.next = node
         self.size += 1
@@ -110,3 +110,11 @@ class LinkedList:
                 current.next = current.next.next
                 self.size -= 1
         return -1
+    
+linked_list = LinkedList()
+node1 = Node(43)
+node2 = Node(0)
+node3 = Node(1)
+linked_list.append(node1)
+linked_list.append(node2)
+linked_list.append(node3)

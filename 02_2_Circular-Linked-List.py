@@ -98,7 +98,7 @@ class CircularLinkedList:
     
     def deleteNode(self, node):
         '''
-        Time Complpexity O(n)
+        Time Complexity O(n)
         '''
         current = self.head
         while(current.next is not None):
@@ -109,3 +109,4 @@ class CircularLinkedList:
                 self.size -= 1
         self.tail.next = self.head
         return -1
+    

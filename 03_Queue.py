@@ -46,6 +46,4 @@ class Queue:
         if self.size == 0:
             raise IndexError("Queue is empty")
         return self.data[self.front]
-    
-    
-        
+          
