@@ -3,6 +3,8 @@ class Queue:
     Due to the dynamic properties of python list, we will try to restrict the amount of element in each queue manually
     However, we can always make use of this dynamic if we want to
     The whole point of Queue lie in the unique characteristic of enqueue and dequeue method FIFO natural
+    Front are used to keep track of with item will go out first dequeue
+    Rear are used to keep track of the recently added item
     """
     def __init__(self, capacity):
         self.maxSize = capacity
@@ -13,7 +15,7 @@ class Queue:
         
     def is_empty(self):
         return self.size == 0
-    def size(self):
+    def getSize(self):
         return self.size
     def front(self):
         return self.front
@@ -46,4 +48,10 @@ class Queue:
         if self.size == 0:
             raise IndexError("Queue is empty")
         return self.data[self.front]
+    
+    def clear(self):
+        """clear or reset the queue
+        """
+        self.front = 0
+        self.rear = 0
           
